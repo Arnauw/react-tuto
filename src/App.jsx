@@ -13,7 +13,6 @@ class App extends Component {
     render() {
         return (
             <div className="">
-                {/*<MyCars></MyCars>*/}
                 <MyCars
                     title={this.state.title}
                     titleColor={this.state.titleColor}

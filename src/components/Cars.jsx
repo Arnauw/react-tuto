@@ -1,11 +1,12 @@
-export const Cars = ({children, color, bgColor}) => {
-    
-    return children ? (
+import {Wrapper} from "./Wrapper.jsx";
+export const Cars = ({children, color,}) => {
+
+    return children && (
         <>
-            <div className="mb-5 bg-amber-800">
+            <Wrapper>
                 <p>Brand: {children}</p>
                 {color ? <p>Color: {color}</p> : null}
-            </div>
+            </Wrapper>
         </>
-    ) : <p>no data</p>
+    )
 }
