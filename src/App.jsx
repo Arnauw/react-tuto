@@ -1,25 +1,20 @@
-import {Component} from 'react'
-import MyCars from "./components/MyCars.jsx";
-
-import './App.css'
-import {Cars} from "./components/Cars.jsx";
+import { Component } from 'react';
+import Mycars from './components/Mycars';
+import './App.css';
 
 class App extends Component {
-    state = {
-        title: 'My Cars Collection',
-        titleColor: 'text-green-500',
-    }
 
-    render() {
-        return (
-            <div className="">
-                <MyCars
-                    title={this.state.title}
-                    titleColor={this.state.titleColor}
-                />
-            </div>
-        )
-    }
+  state = {
+    titre: 'Mon Catalogue Voitures'
+  }
+
+  render() {
+    return (
+      <div className='App'>
+        <Mycars title={this.state.titre} />
+      </div>
+    )
+  }
 }
 
-export default App
+export default App;

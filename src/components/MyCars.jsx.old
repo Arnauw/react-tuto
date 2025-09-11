@@ -1,0 +1,57 @@
+import {Component} from 'react';
+import {Cars} from "./Cars.jsx";
+
+export default class MyCars extends Component {
+    state = {
+        cars: [
+            'Rolls-Royce',
+            'Ferrari',
+            'Aston Martin'
+        ],
+    }
+    
+    render() {
+        const alertCopy = () => alert('You can copy this!');
+        // const mouseOver = (e) => {
+        //     if ( e.target.style.color === 'red') {
+        //         e.target.style.color = 'green';
+        //         e.target.textContent = e.target.textContent.toLowerCase();
+        //     } else {
+        //         e.target.style.color = 'red';
+        //         e.target.textContent = e.target.textContent.toUpperCase();
+        //     }
+        // }
+        
+        const colors = ['black', 'red', 'brown'];
+        return (
+            <div>
+                <h1 
+                    // onMouseOver={mouseOver} 
+                    className={`mb-10 ${this.props.titleColor}`}
+                >
+                    {this.props.title}
+                </h1>
+                
+                <p onCopy={alertCopy} className="text-center mb-10">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi deserunt ea est
+                    exercitationem explicabo facilis harum magni necessitatibus nisi nobis, non quia quis sapiente ut
+                    vel veniam veritatis.
+                </p>
+
+                {
+                    this.state.cars.map((car, index) => {
+                        return (
+                            <Cars key={index} color={colors[index]}>
+                                {car}
+                            </Cars>
+                        );
+                    })
+                }
+
+                {/*<Cars>{this.state.cars[0]}</Cars>*/}
+                {/*<Cars color="red">{this.state.cars[1]}</Cars>*/}
+                {/*<Cars color="brown">{this.state.cars[2]}</Cars>*/}
+            </div>
+        );
+    }
+}

@@ -1,0 +1,41 @@
+import {Component} from 'react'
+import MyCars from "./components/MyCars.jsx";
+import './App.css'
+import {Cars} from "./components/Cars.jsx";
+
+
+class App extends Component {
+    state = {
+        title: 'My Cars Collection',
+        titleColor: 'text-green-500',
+    }
+
+    // clickButton = (titleChanged) => {
+    //     this.setState(
+    //         { title: titleChanged }
+    //     );
+    // }
+
+    onChangeInput = (e) => {
+        this.setState(
+            { title: e.target.value },
+        );
+    }
+    
+
+    render() {
+        return (
+            <div className="">
+                {/*<button onClick={() => this.clickButton('Amine collection')}>Click me</button>*/}
+                {/*<button onClick={this.clickButton.bind(this, 'Amine collection')}>Click me</button>*/}
+                <input onChange={this.onChangeInput} value={this.state.title} type="text"/>
+                <MyCars
+                    title={this.state.title}
+                    titleColor={this.state.titleColor}
+                />
+            </div>
+        )
+    }
+}
+
+export default App
