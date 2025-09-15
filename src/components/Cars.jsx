@@ -12,7 +12,6 @@ const Car = ({color, children, year, age}) => {
             </div>
         )
     }
-    // return null // ce return est Facultatif
 }
 
 export default Car
