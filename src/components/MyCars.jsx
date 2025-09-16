@@ -1,6 +1,12 @@
 import {Component} from 'react'
 import Car from './Cars'
 
+import imgFerrari from "./imgs/red-ferrari.jpg";
+import imgRollsroyce from "./imgs/black-rollsroyce.jpg";
+import imgTata from "./imgs/tata-white.jpg";
+import imgTest from "./imgs/purple-chrystler.jpg";
+
+
 class MyCars extends Component {
 
     getAge = (year) => {
@@ -22,21 +28,25 @@ class MyCars extends Component {
                 name: 'Ferrari',
                 color: "red",
                 year: 2000,
+                image: imgFerrari,
             },
             {
                 name: 'Rolls-Royce',
-                color: "white",
+                color: "green",
                 year: 2010,
+                image: imgRollsroyce,
             },
             {
                 name: 'Tata',
-                color: "purple",
+                color: "black",
                 year: 1990,
+                image: imgTata,
             },
             {
                 name: 'Test',
                 color: "purple",
                 year: 2025,
+                image: imgTest,
             },
         ]
     };
@@ -57,12 +67,13 @@ class MyCars extends Component {
                 <h1 className="mb-5">{this.props.title}</h1>
                 <button onClick={this.addTenYears} className="mb-5">+10 Years</button>
 
-                {this.state.cars.map(({year, color, name, age}, i) => (
+                {this.state.cars.map(({year, color, name, age, image}, i) => (
                     <div key={i}>
                         <Car
                             year={year}
                             color={color}
                             age={this.getAge(year)}
+                            image={image}
                         >
                             {name}
                         </Car>

@@ -1,12 +1,14 @@
 const Toto = props => {
+
   return (
     <div>
         <h2 className={"my-5"}>{props.name}</h2>
         <button
-            // Compléter cette section
+            onClick={() => props.reponseTotoProps("Non tue pue !")}
+            disabled={props.leState.disabled}
         >Réponse</button>
 
-        <p>{props.leState.messageToto}</p>
+        <p className={"my-5"}>{props.leState.messageToto}</p>
     </div>
   )
 }

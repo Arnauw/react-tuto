@@ -16,9 +16,9 @@ class App extends Component {
             <div className='App'>
 
                 {/*<Mom></Mom>*/}
-                <Maman></Maman>
+                {/*<Maman></Maman>*/}
                 {/*  <Welcome/>*/}
-                {/*<MyCars title={this.state.titre} />*/}
+                <MyCars title={this.state.titre} />
             </div>
         )
     }
