@@ -1,7 +1,7 @@
 import {Component} from "react";
 import Car from "./Cars.jsx";
 import styled from "styled-components";
-import tw from "tailwind-styled-components"
+import tw from "tailwind-styled-components";
 
 const Title = styled.h1`
   font-size: 1.5em;
@@ -17,18 +17,7 @@ const Button = tw.button`
     rounded
     hover:bg-blue-600
     bg-indigo-600
-`
-
-// const Button = styled.button`
-//   //background: black;
-//   color: #ffffff;
-//   padding: 12px 13px;
-//   font-size: 15px;
-// `
-
-// const Button = styled.button
-// ${twbg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600}
-;
+`;
 
 const Container = tw.div`
     flex
