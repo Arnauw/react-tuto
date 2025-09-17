@@ -12,8 +12,6 @@ class MyCars extends Component {
     getAge = (year) => {
         const now = new Date().getFullYear();
         const age = now - year;
-        
-        console.log(now, age);
 
         let englishYearStr = "";
         age === 1 ? englishYearStr = "year" : englishYearStr = "years";
