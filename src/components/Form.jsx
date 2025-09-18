@@ -9,7 +9,7 @@ const Title = styled.h1`
   color: #BF4F74;
 `;
 
-const Button = tw.button`
+const Button = tw["button"]`
     text-white
     font-bold
     py-2
@@ -19,13 +19,13 @@ const Button = tw.button`
     bg-indigo-600
 `;
 
-const Container = tw.div`
-    flex
-    items-center
-    justify-center
-    flex-col
-    w-full
-    bg-indigo-600
+const Container = tw["div"]`
+            flex
+            items-center
+            justify-center
+            flex-col
+            w-full
+            bg-indigo-600
 `
 
 class Form extends Component {
