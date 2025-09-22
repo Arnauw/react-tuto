@@ -6,18 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
     plugins: [
         react(),
-        tailwindcss(
-        //     {
-        //     safelist: [
-        //         "text-[black]",
-        //         "text-[white]",
-        //         "bg-[red]",
-        //         "bg-[blue]",
-        //         "bg-[grey]",
-        //         "rounded-[8px]",
-        //         "rounded-[20px]",
-        //     ],
-        // }
-        ),
+        tailwindcss(),
     ],
 })

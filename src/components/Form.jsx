@@ -10,6 +10,7 @@ const Title = styled.h1`
 `;
 
 const Button = tw["button"]`
+   
     text-white
     font-bold
     py-2
